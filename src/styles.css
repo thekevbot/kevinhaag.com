@@ -1,0 +1,48 @@
+.matter-controller canvas {
+  display: block;
+}
+.matter {
+  z-index: 0;
+}
+.matter-body {
+  opacity: 0;
+  position: absolute;
+  visibility: visible;
+  width: auto;
+  height: auto;
+}
+.matter-body.is--hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  padding: 0.1%;
+}
+.matter-body .matter-body__glow {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.matter-body.hover .matter-body__glow {
+  opacity: 0.4;
+}
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 120ms linear;
+}
+#cursors-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* #matter-controller,
+#matter-controller canvas {
+  height: calc(100vh + 2px);
+} */
+
+.is-cooling {
+  color: var(--white) !important;
+}
